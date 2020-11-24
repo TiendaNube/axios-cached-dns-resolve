@@ -1,7 +1,8 @@
 {
-  "name": "axios-cached-dns-resolve",
-  "version": "1.1.0",
+  "name": "@bumble/axios-cached-dns-resolve",
+  "version": "1.1.1",
   "main": "index.js",
+  "type": "module",
   "description": "Caches dns resolutions made with async dns.resolve instead of default sync dns.lookup, refreshes in background",
   "scripts": {
     "watchUnit": "NODE_ENV=DEBUG ava --fail-fast -v **/__tests__/**/*test*.js --watch",
