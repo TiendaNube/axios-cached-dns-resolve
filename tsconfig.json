@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "outDir": "./lib/esm",
+        "baseUrl": "./src",
+        "target": "ES3",
+        "module": "ESNext",
+        "esModuleInterop": true
+    },
+    "exclude": ["lib", "**/__tests__"]
+}

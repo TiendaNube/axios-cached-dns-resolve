@@ -1,15 +1,19 @@
 {
   "name": "@bumble/axios-cached-dns-resolve",
-  "version": "1.1.1",
-  "main": "index.js",
-  "type": "module",
+  "version": "1.1.6",
+  "main": "./lib/cjs/index.js",
+  "files": [
+    "lib/"
+  ],
   "description": "Caches dns resolutions made with async dns.resolve instead of default sync dns.lookup, refreshes in background",
   "scripts": {
     "watchUnit": "NODE_ENV=DEBUG ava --fail-fast -v **/__tests__/**/*test*.js --watch",
     "ava": "ava",
     "test": "npm run ava",
     "watchLint": "esw . --ext=js --ignore-pattern '**/__tests__' --ignore-path .gitignore --fix --watch",
-    "lint": "eslint . --ext=js --ignore-pattern '**/__tests__' --ignore-path .gitignore --fix"
+    "lint": "eslint . --ext=js --ignore-pattern '**/__tests__' --ignore-path .gitignore --fix",
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "prepublish": "rm -rf lib && npm run tsc"
   },
   "engines": {
     "node": ">=10.13.0"
@@ -33,16 +37,17 @@
   },
   "devDependencies": {
     "ava": "^3.13.0",
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "delay": "^4.4.0",
     "eslint": "^7.12.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-watch": "^7.0.0",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "ignore-styles": "^5.0.1",
-    "esm": "^3.2.25"
+    "typescript": "^4.2.4"
   },
   "dependencies": {
     "json-stringify-safe": "^5.0.1",

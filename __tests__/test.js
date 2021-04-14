@@ -1,14 +1,9 @@
 import { serial as test } from 'ava'
+import axios from 'axios'
 import delay from 'delay'
 import dns from 'dns'
-import URL from 'url'
-import net from 'net'
 import LRUCache from 'lru-cache'
-
-import axios from 'axios'
-import stringify from 'json-stringify-safe'
-
-import * as axiosCachingDns from '../index'
+import axiosCachingDns from '../lib/esm'
 
 const util = require('util')
 const dnsResolve = util.promisify(dns.resolve)

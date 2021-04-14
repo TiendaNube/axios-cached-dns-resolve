@@ -1,1 +1,6 @@
-
+src/
+.eslintignore
+.eslintrc.js
+.gitignore
+tsconfig.json
+tsconfig-cjs.json
